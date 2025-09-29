@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class CalculoCirculoEsfera {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double PI = 3.141592;
+        
+        System.out.println("=== CÁLCULOS DE CÍRCULO E ESFERA ===\n");
+        System.out.println("Escolha a operação:");
+        System.out.println("1 - Perímetro do círculo");
+        System.out.println("2 - Área do círculo");
+        System.out.println("3 - Volume da esfera");
+        System.out.print("\nDigite o código da operação: ");
+        int operacao = sc.nextInt();
+        
+        System.out.print("Digite o valor do raio: ");
+        double raio = sc.nextDouble();
+        
+        System.out.println();
+        
+        if (operacao == 1) {
+            double perimetro = 2 * PI * raio;
+            System.out.println("Perímetro do círculo: " + perimetro);
+        } 
+        else if (operacao == 2) {
+            double area = PI * raio * raio;
+            System.out.println("Área do círculo: " + area);
+        } 
+        else if (operacao == 3) {
+            double volume = (4.0 / 3.0) * PI * raio * raio * raio;
+            System.out.println("Volume da esfera: " + volume);
+        } 
+        else {
+            System.out.println("ERRO: Código da operação é inválido!");
+        }
+        
+        sc.close();
+    }
+}
